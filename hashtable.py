@@ -5,12 +5,12 @@ class HashTable:
         for i in range(initial_capacity):
             self.table.append([])
 
-    # Insert a new item into the hash table and update the existed item in the hash table
+    # Insert a new item into hash table and update the existed item in hash table
     def insert(self, key, item):
         # get the bucket list where this item will go
         bucket = hash(key) % len(self.table)
         bucket_list = self.table[bucket]
-        # update key if it is already in the bucket list
+        # update the item if it is already in the bucket list
         for kv in bucket_list:
             if kv[0] == key:
                 kv[1] = item
@@ -20,7 +20,7 @@ class HashTable:
         bucket_list.append(key_value)
         return True
 
-    # Search for an item in the hash table with matching key
+    # Search for an item in hash table with matching key
     # Return the item if found, or None if not found
     def search(self, key):
         # get the bucket list where this key would be
@@ -32,7 +32,7 @@ class HashTable:
                 return kv[1]
         return None
 
-    # Remove an item from the hash table with matching key
+    # Remove an item from hash table with matching key
     def remove(self, key):
         # get the bucket list where this item will be removed from
         bucket = hash(key) % len(self.table)

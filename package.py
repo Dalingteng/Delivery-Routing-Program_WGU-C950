@@ -15,3 +15,12 @@ class Package:
     def __str__(self):
         return "%s, %s, %s, %s, %s, %s, %s, %s, %s" % (self.id, self.address, self.city, self.state, self.zipcode,
                                                        self.deadline, self.weight, self.delivery_time, self.status)
+
+    def updateStatus(self, input_time):
+        if self.delivery_time < input_time:
+            self.status = "Delivered"
+        elif self.departure_time > input_time:
+            self.status = "En route"
+        else:
+            self.status = "At the hub"
+    
