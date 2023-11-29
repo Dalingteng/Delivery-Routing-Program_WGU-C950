@@ -1,6 +1,6 @@
 # Create HashTable class using chaining
 class HashTable:
-    def __init__(self, initial_capacity=20):
+    def __init__(self, initial_capacity=40):
         self.table = []
         for i in range(initial_capacity):
             self.table.append([])
