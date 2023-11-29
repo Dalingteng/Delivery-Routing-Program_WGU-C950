@@ -36,7 +36,7 @@ class Package:
             self.status = "Delivered"
         # Update address of package 9 at 10:20
         if self.id == 9:
-            if input_time > timedelta(hours=10, minutes=20):
+            if input_time >= timedelta(hours=10, minutes=20):
                 self.address = "410 S State St"
                 self.zipcode = "84111"
             else:
