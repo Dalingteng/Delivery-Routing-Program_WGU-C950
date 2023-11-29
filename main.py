@@ -1,5 +1,7 @@
 # Author: Sochandaling Teng
 # Student ID: 010309126
+# Date: 11/22/2023
+# WGU_C950_Project
 
 import csv
 from datetime import timedelta
